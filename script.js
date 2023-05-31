@@ -5,11 +5,16 @@ document.getElementById('calculo').addEventListener('click', (event) => {
     let pesoInput = parseFloat(document.getElementById('peso').value);
     let alturaInput = parseFloat(document.getElementById('altura').value);
     let idadeInput = parseFloat(document.getElementById('idade').value);
-    let sexo = document.getElementById('sexo').value;
+    let select = document.getElementById('select').value;
 
     // Validar os dados de entrada
-    if (isNaN(pesoInput) || isNaN(alturaInput) || isNaN(idadeInput) || sexo === '') {
-        alert('Por favor, preencha todos os campos com valores numéricos.');
+    if (isNaN(pesoInput) || isNaN(alturaInput) || isNaN(idadeInput) || select === '') {
+        Swal.fire({
+            position: 'bottom',
+            icon: 'error',
+            text: 'Por favor, preencha todos os campos.',
+            footer: '<a href="">Why do I have this issue?</a>'
+        })
         return;
     }
 
@@ -27,12 +32,35 @@ document.getElementById('calculo').addEventListener('click', (event) => {
     BfFeminino = BfFeminino.toFixed(2);
 
     // Exibir o resultado formatado
-    if (sexo === 'masculino') {
-        alert(`Percentual de gordura corporal está em aproximadamente (homem): ${BfMasculino}%`);
+    if (select === 'Masculino') {
+        const message = `Percentual de gordura corporal está em aproximadamente (homem): ${BfMasculino}%`;
+        Swal.fire({
+            position: 'bottom',
+            icon: 'success',
+            title: 'Your work has been saved',
+            text: message,
+            showConfirmButton: true,
+        });
 
-    } else if (sexo === 'feminino') {
-        alert(`Percentual de gordura corporal está em aproximadamente (mulher): ${BfFeminino}%`);
+    } else if (select === 'Feminino') {
+        const message = `Percentual de gordura corporal está em aproximadamente (mulher): ${BfFeminino}%`;
+        Swal.fire({
+            position: 'bottom',
+            icon: 'success',
+            title: 'Your work has been saved',
+            text: message,
+            showConfirmButton: true,
+        });
+
+    } else {
+        Swal.fire({
+            position: 'bottom',
+            icon: 'error',
+            text: 'Por favor, selecione uma das opções',
+            footer: '<a href="">Why do I have this issue?</a>'
+        })
     }
+
 
 })
 

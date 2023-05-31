@@ -1,28 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 body {
-    margin-left: 5px;
-    margin-right: 5px;
+    background-image: url(/img/fundo.jpg);
+    backdrop-filter: blur(10px);
 }
 
-h1 {
-    color: blue;
+main {
     text-align: center;
+    padding: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
-button {
-    border-radius: 20px;
+header h1 {
+    color: black;
+    text-align: center;
 }
 
 form,
 label {
+    background-color: gray;
     padding: 5px;
     margin: 8px;
+}
+
+form {
+    border: 8px solid black;
+    /* width: 80%;
+    height: 80%; */
 }
 
 input {
@@ -31,29 +44,19 @@ input {
     display: block;
 }
 
-form {
-    border: 1px solid black;
-}
-
 form #calculo {
     width: 250px;
     font-size: 18px;
 }
 
-#idade {
-    width: 80px;
+#calculo:hover {
+    transition: 1s;
 }
 
 .caixa {
     display: inline-block;
     margin: 0 auto;
 
-}
-
-.desc {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .desc h2 {

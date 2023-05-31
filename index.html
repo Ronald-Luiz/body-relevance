@@ -3,50 +3,73 @@
 
 <head>
     <title>Porcentagem de Gordura Corporal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <!-- importação do CSS -->
     <link rel="stylesheet" href="/style.css">
+    <!-- Importação do Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
 <body>
     <!-- cabeçalho -->
     <header>
-        <h1>Será que você está com percentual de Gordura muito alto?</h1>
+        <div>
+            <h1>Porcentagem de Gordura Corporal</h1>
+        </div>
     </header>
     <!-- conteudo principal -->
     <main>
-        <!-- descrição -->
-        <div class="desc">
-            <h2>Existe percentual de gordura ideal?</h2>
-            <p>Sim. Para mulheres é ideal que a porcentagem de gordura fique entre 20% e 24%. Quanto aos homens, as
-                porcentagens precisam estar entre 16% e 20%. A saúde do organismo funciona assim: quanto maior os
-                índices de
-                massa magra, mais fácil é para manter o peso estável. Se você quer encerrar a briga com a balança é
-                fundamental
-                focar na construção de massa magra.</p>
-        </div>
-
         <!-- calculadora   -->
-        <div class="caixa">
-            <img src="/img/indice.png">
-            <form>
-                <label>Qual seu peso?</label>
-                <input id="peso" type="text" placeholder="Digite seu peso">
+        <div>
+            <form class="row gy-2 gx-3 align-items-center">
+                <!-- imagens -->
+                <div class="image">
+                    <img src="/img/indice homem.png" class="img-fluid" alt="...">
+                    <img src="/img/indice mulher.png" class="img-fluid" alt="...">
+                </div>
 
-                <label>Qual sua altura?</label>
-                <input id="altura" type="text" placeholder="Digite sua altura">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Qual seu peso?</span>
+                    <input id="peso" class="form-control input-group-sm" type="number" placeholder="peso">
+                </div>
 
-                <label>Quantos anos você tem?</label>
-                <input id="idade" type="number" placeholder="idade">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Qual sua altura?</span>
+                    <input id="altura" class="form-control input-group-sm" type="number"
+                        placeholder="altura">
+                </div>
 
-                <label>Qual seu sexo?</label>
-                <input id="sexo" type="text" placeholder="Digite seu sexo">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Qual sua idade?</span>
+                    <input id="idade" class="form-control input-group-sm" type="number" placeholder="idade">
+                </div>
 
-                <button id="calculo">Calcular</button>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Sexo</label>
+                    <select class="form-select-3" id="select">
+                        <option selected>Escolher</option>
+                        <option id="Masculino">Masculino</option>
+                        <option id="Feminino">Feminino</option>
+                    </select>
+                </div>
+                <!-- descrição -->
+                <div class=" desc">
+                    <h2>Qual seu percentual de Gordura?</h2>
+                </div>
+                <button id="calculo" class="btn btn-outline-dark d-grid gap-2 col-6 mx-auto"
+                    style="font-size: 24px;">Calcular</button>
             </form>
         </div>
     </main>
     <script src="/script.js"></script>
+    <!-- Importação do Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <!-- Importação do sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
