@@ -47,7 +47,7 @@ input {
 form #calculo {
     width: 250px;
     font-size: 18px;
-    margin-bottom:30px
+    margin-bottom: 30px
 }
 
 #calculo:hover {
@@ -71,7 +71,8 @@ table {
 
 th,
 td {
-    padding: 8px;
+    font-size: 100%;
+    
     text-align: center;
     border-bottom: 1px solid #ddd;
 }
@@ -81,14 +82,3 @@ th {
     /* color: black; */
     font-weight: bold;
 }
-
-/* tr:nth-child(even) {
-    background-color: #f9f9f9;
-    transition: 1s;
-}
-
-tr:hover {
-    /* background-color: black; */
-    /* color: white; */
-    /* transition: 1s; */
-/* } */ 
