@@ -10,7 +10,7 @@ document.getElementById('calculo').addEventListener('click', (event) => {
     // Validar os dados de entrada
     if (isNaN(pesoInput) || isNaN(alturaInput) || isNaN(idadeInput) || select === '') {
         Swal.fire({
-            
+
             icon: 'error',
             text: 'Por favor, preencha todos os campos.',
             footer: '<a href="">Why do I have this issue?</a>'
@@ -35,7 +35,7 @@ document.getElementById('calculo').addEventListener('click', (event) => {
     if (select === 'Masculino') {
         const message = `Percentual de gordura corporal está em aproximadamente (homem): ${BfMasculino}%`;
         Swal.fire({
-           
+
             icon: 'success',
             title: 'Calculado!',
             text: message,
@@ -45,7 +45,7 @@ document.getElementById('calculo').addEventListener('click', (event) => {
     } else if (select === 'Feminino') {
         const message = `Percentual de gordura corporal está em aproximadamente (mulher): ${BfFeminino}%`;
         Swal.fire({
-          
+
             icon: 'success',
             title: 'Calculado!',
             text: message,
@@ -59,8 +59,12 @@ document.getElementById('calculo').addEventListener('click', (event) => {
             footer: '<a href="">Why do I have this issue?</a>'
         })
     }
-
-
 })
+
+function formatarAltura(input) {
+    var valor = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+    valor = valor.replace(/(\d{1})(\d)/, '$1.$2'); // Adiciona o ponto após os primeiros dois dígitos
+    input.value = valor;
+}
 
 
