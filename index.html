@@ -24,6 +24,7 @@
         <!-- calculadora   -->
         <div>
             <form class="row gy-2 gx-3 align-items-center">
+                
                 <!-- INDICE -->
                 <div class="Indice">
                     <table>
@@ -63,6 +64,30 @@
                         </tbody>
                     </table>
                 </div>
+
+                <!-- FORMULA UTILIZADA -->
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fórmula</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    BT = (1.20 x IMC) + (0.23 x idade) - (10.8 x sexo) - 5.4
+                                    <br><br>
+                                    <strong>Legenda:</strong>
+                                    <br>
+                                    sexo = 1 (masculino)
+                                    <br>
+                                    sexo = 0 (feminino)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Qual seu peso?</span>
                     <input id="peso" class="form-control input-group-sm" type="number" placeholder="peso">
@@ -92,6 +117,8 @@
                 </div>
                 <button id="calculo" class="btn btn-outline-dark d-grid gap-2 col-6 mx-auto"
                     style="font-size: 24px;">Calcular</button>
+
+
             </form>
         </div>
     </main>

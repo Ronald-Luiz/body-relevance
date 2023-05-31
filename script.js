@@ -37,7 +37,7 @@ document.getElementById('calculo').addEventListener('click', (event) => {
         Swal.fire({
            
             icon: 'success',
-            title: 'Your work has been saved',
+            title: 'Calculado!',
             text: message,
             showConfirmButton: true,
         });
@@ -47,7 +47,7 @@ document.getElementById('calculo').addEventListener('click', (event) => {
         Swal.fire({
           
             icon: 'success',
-            title: 'Your work has been saved',
+            title: 'Calculado!',
             text: message,
             showConfirmButton: true,
         });
