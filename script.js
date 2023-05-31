@@ -9,12 +9,13 @@ document.getElementById('calculo').addEventListener('click', (event) => {
 
     // Validar os dados de entrada
     if (isNaN(pesoInput) || isNaN(alturaInput) || isNaN(idadeInput) || select === '') {
-        Swal.fire({
 
-            icon: 'error',
-            text: 'Por favor, preencha todos os campos.',
-            footer: '<a href="">Why do I have this issue?</a>'
-        })
+        swal({
+            title: "Ops...!",
+            text: "Por favor, preencha todos os campos.",
+            icon: "error",
+        });
+
         return;
     }
 
@@ -34,30 +35,32 @@ document.getElementById('calculo').addEventListener('click', (event) => {
     // Exibir o resultado formatado
     if (select === 'Masculino') {
         const message = `Percentual de gordura corporal está em aproximadamente (homem): ${BfMasculino}%`;
-        Swal.fire({
 
-            icon: 'success',
-            title: 'Calculado!',
+        swal({
+            title: "Calculado!",
             text: message,
-            showConfirmButton: true,
+            icon: "success",
         });
 
     } else if (select === 'Feminino') {
         const message = `Percentual de gordura corporal está em aproximadamente (mulher): ${BfFeminino}%`;
-        Swal.fire({
 
-            icon: 'success',
-            title: 'Calculado!',
+        swal({
+            title: "Calculado!",
             text: message,
-            showConfirmButton: true,
+            icon: "success",
         });
 
     } else {
-        Swal.fire({
-            icon: 'error',
-            text: 'Por favor, selecione uma das opções',
-            footer: '<a href="">Why do I have this issue?</a>'
-        })
+
+        swal({
+            title: "Ops...!",
+            text: "Por favor, selecione uma das opções",
+            icon: "error",
+        });
+
+
+
     }
 })
 
