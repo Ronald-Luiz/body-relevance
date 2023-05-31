@@ -1,4 +1,5 @@
-# Estimativa de Gordura Corporal(basic)
+# Estimativa de Gordura Corporal
+##básico
 
 Lógica utilizada:
 
